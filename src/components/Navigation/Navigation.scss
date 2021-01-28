@@ -1,0 +1,37 @@
+.navigation {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  a {
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    color: #595959;
+    padding: 10px 0;
+    margin: 0 30px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.25s linear;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 100%;
+      bottom: 7px;
+      background: #FE9002;
+      height: 2px;
+    }
+    &:hover {
+      color: #FE9002;
+      text-decoration: none;
+    }
+    &.active {
+     &:before {
+       right: 0;
+     }
+    }
+  }
+}

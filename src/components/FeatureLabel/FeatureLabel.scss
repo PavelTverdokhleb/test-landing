@@ -1,0 +1,21 @@
+.feature-label {
+  display: inline-block;
+  font-size: 22px;
+  line-height: 27px;
+  color: #FFFFFF;
+  margin: 20px 0;
+  position: relative;
+  min-width: 200px;
+  text-align: center;
+  &:before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.28);
+    position: absolute;
+    left: 50%;
+    top: -3px;
+    transform: translateX(-50%) rotate(45deg);
+  }
+}

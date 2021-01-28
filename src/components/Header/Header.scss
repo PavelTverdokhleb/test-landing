@@ -1,0 +1,29 @@
+.header-wrapper {
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.header-inner {
+  height: 117px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-button {
+  background-color: #f7f8fa;
+  border: 2px solid #fe9002;
+  font-size: 18px;
+  line-height: 46px;
+  height: 50px;
+  min-width: 160px;
+  text-align: center;
+  color: #595959;
+  padding: 0 30px;
+  cursor: pointer;
+  transition: background-color 0.25s linear;
+  &:hover {
+    background-color: #fdac44;
+    color: #ffffff;
+  }
+}

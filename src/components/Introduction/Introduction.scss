@@ -1,0 +1,75 @@
+.introduction-wrapper {
+  min-height: calc(100vh - 117px);
+  background: url("../../assets/images/intro_bg.png") no-repeat 50% 100%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 130px;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.introduction-title {
+  font-size: 50px;
+  line-height: 77px;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0 0 6px;
+}
+
+.introduction-subtitle {
+  font-size: 26px;
+  line-height: 43px;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 16px auto 45px;
+  max-width: 65%;
+}
+
+.introduction-features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introduction-button {
+  display: block;
+  margin: 80px auto 0;
+  background: #FE9002;
+  color: #FFFFFF;
+  padding: 0 35px 0 15px;
+  border-radius: 1px;
+  border: none;
+  height: 66px;
+  min-width: 370px;
+  font-size: 24px;
+  line-height: 27px;
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: #FFFFFF;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%) rotate(45deg);
+    transition: transform 0.25s linear;
+  }
+  &:hover:after {
+    transform: translate(50%, -50%) rotate(225deg);
+  }
+}
+
+.move-forward-button {
+  background: transparent;
+  border: none;
+  padding: 27px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
