@@ -1,21 +1,18 @@
-import * as React from 'react';
+import * as React from "react";
 import { Container } from "react-bootstrap";
+import { Logo, LogoType } from "../Logo";
 import { Navigation } from "../Navigation";
-import LogoImage from '../../assets/images/logo.svg';
-import './Header.scss';
+import "./Header.scss";
 
 export const Header = () => {
-    return (
-        <header className="header-wrapper">
-            <Container>
-                <div className="header-inner">
-                    <a href="#" rel="noopener nofollow">
-                        <img src={LogoImage} alt="logo"/>
-                    </a>
-                    <Navigation/>
-                    <button className="contact-button">Contact us</button>
-                </div>
-            </Container>
-        </header>
-    );
-}
+  return (
+    <header className="header-wrapper">
+      <Container>
+        <div className="header-inner">
+          <Logo type={LogoType.dark} />
+          <Navigation />
+        </div>
+      </Container>
+    </header>
+  );
+};

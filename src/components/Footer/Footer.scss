@@ -2,4 +2,99 @@
   min-height: 285px;
   background: #001832;
   padding: 60px 0;
+  color: #ffffff;
+}
+
+.footer-section-title {
+  font-size: 22px;
+  line-height: 27px;
+  margin: 0 0 15px;
+  padding: 0 0 15px;
+  color: #ffffff;
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #fe9002;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.footer-logo-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.company-policies a {
+  display: block;
+  color: #d1d1d1;
+  font-size: 16px;
+  line-height: 30px;
+  transition: color 0.25s linear;
+  &:hover {
+    color: #fe9002;
+    text-decoration: none;
+  }
+}
+
+.contacts {
+  margin-top: 33px;
+  a {
+    display: block;
+    color: #eeeeee;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    margin: 17px 0;
+    text-align: center;
+    &:hover {
+      color: #fe9002;
+      text-decoration: none;
+    }
+  }
+}
+
+.address {
+  color: #eeeeee;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.footer-navigation {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  li {
+    min-width: 50%;
+    padding: 8px;
+  }
+  a {
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    color: #eeeeee;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.25s linear;
+    &:hover {
+      color: #fe9002;
+      text-decoration: none;
+    }
+  }
+  & :nth-child(2n) {
+    padding: 0 0 7px 7px;
+  }
+  & :nth-child(2n + 1) {
+    padding: 0 7px 7px 0;
+  }
 }

@@ -1,0 +1,16 @@
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  a {
+    svg {
+      fill: #ffffff;
+      transition: fill 0.25s linear;
+    }
+    &:hover {
+      svg {
+        fill: #fe9002;
+      }
+    }
+  }
+}

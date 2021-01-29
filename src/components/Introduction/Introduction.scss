@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 130px;
+  padding: 60px 0 130px;
   position: relative;
   overflow: hidden;
   z-index: 2;
@@ -14,7 +14,7 @@
 .introduction-title {
   font-size: 50px;
   line-height: 77px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   margin: 0 0 6px;
 }
@@ -22,7 +22,7 @@
 .introduction-subtitle {
   font-size: 26px;
   line-height: 43px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   margin: 16px auto 45px;
   max-width: 65%;
@@ -37,12 +37,12 @@
 .introduction-button {
   display: block;
   margin: 80px auto 0;
-  background: #FE9002;
-  color: #FFFFFF;
-  padding: 0 35px 0 15px;
+  background: #fe9002;
+  color: #ffffff;
+  padding: 15px 35px 15px 15px;
   border-radius: 1px;
   border: none;
-  height: 66px;
+  min-height: 66px;
   min-width: 370px;
   font-size: 24px;
   line-height: 27px;
@@ -52,7 +52,7 @@
     display: block;
     width: 36px;
     height: 36px;
-    background: #FFFFFF;
+    background: #ffffff;
     position: absolute;
     right: 0;
     top: 50%;
@@ -72,4 +72,35 @@
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
+}
+
+@media (max-width: 991px) {
+  .introduction-subtitle {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .introduction-title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 599px) {
+  .introduction-title {
+    font-size: 30px;
+    line-height: 50px;
+  }
+  .introduction-subtitle {
+    font-size: 20px;
+  }
+  .introduction-features {
+    flex-direction: column;
+  }
+  .introduction-button {
+    min-width: auto;
+    max-width: 90%;
+    width: 100%;
+    white-space: pre-wrap;
+  }
 }

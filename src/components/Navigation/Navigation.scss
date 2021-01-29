@@ -21,17 +21,45 @@
       left: 0;
       right: 100%;
       bottom: 7px;
-      background: #FE9002;
+      background: #fe9002;
       height: 2px;
     }
     &:hover {
-      color: #FE9002;
+      color: #fe9002;
       text-decoration: none;
     }
     &.active {
-     &:before {
-       right: 0;
-     }
+      &:before {
+        right: 0;
+      }
     }
+  }
+}
+
+.contact-button {
+  margin-left: 70px;
+  background-color: #f7f8fa;
+  border: 2px solid #fe9002;
+  font-size: 18px;
+  line-height: 46px;
+  height: 50px;
+  min-width: 160px;
+  text-align: center;
+  color: #595959;
+  padding: 0 30px;
+  cursor: pointer;
+  transition: background-color 0.25s linear;
+  &:hover {
+    background-color: #fdac44;
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navigation a {
+    margin: 0 20px;
+  }
+  .contact-button {
+    margin-left: 30px;
   }
 }

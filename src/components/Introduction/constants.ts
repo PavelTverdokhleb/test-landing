@@ -1,19 +1,21 @@
+import { v4 as uuidv4 } from "uuid";
+
 interface IFeatureLabel {
-    id: string;
-    value: string;
+  id: string;
+  value: string;
 }
 
 export const INTRODUCTION_FEATURES: IFeatureLabel[] = [
-    {
-        id: '1',
-        value: 'Liquidity',
-    },
-    {
-        id: '2',
-        value: 'Technology'
-    },
-    {
-        id: '3',
-        value: 'Infrastructure'
-    }
-]
+  {
+    id: uuidv4(),
+    value: "Liquidity",
+  },
+  {
+    id: uuidv4(),
+    value: "Technology",
+  },
+  {
+    id: uuidv4(),
+    value: "Infrastructure",
+  },
+];
