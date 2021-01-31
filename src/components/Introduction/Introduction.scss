@@ -64,6 +64,18 @@
   }
 }
 
+@keyframes arrowBounce {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -10px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
 .move-forward-button {
   background: transparent;
   border: none;
@@ -72,6 +84,11 @@
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
+  animation: arrowBounce 1s linear infinite;
+  transition: all 0.25s linear;
+  &:hover {
+    animation: none;
+  }
 }
 
 @media (max-width: 991px) {

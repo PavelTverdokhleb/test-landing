@@ -55,11 +55,68 @@
   }
 }
 
+.burger-button {
+  background: transparent;
+  border: none;
+  position: relative;
+  width: 50px;
+  height: 40px;
+  padding: 5px;
+  span {
+    border-radius: 4px;
+    width: 40px;
+    height: 4px;
+    display: block;
+    background: #001832;
+    position: absolute;
+    &:nth-of-type(1) {
+      left: 5px;
+      top: 5px;
+    }
+    &:nth-of-type(2) {
+      left: 5px;
+      top: calc(50% - 2px);
+    }
+    &:nth-of-type(3) {
+      left: 5px;
+      top: calc(100% - 7px);
+    }
+  }
+}
+
+.navigation-mobile {
+  position: fixed;
+  left: 0;
+  top: 115px;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 9;
+  .navigation {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    a {
+      font-size: 30px;
+    }
+  }
+}
+
 @media (max-width: 1199px) {
   .navigation a {
     margin: 0 20px;
   }
   .contact-button {
     margin-left: 30px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .navigation a {
+    margin: 0 15px;
+  }
+  .contact-button {
+    margin-left: 20px;
   }
 }
