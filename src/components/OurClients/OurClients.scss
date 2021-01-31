@@ -1,0 +1,16 @@
+@import "../../styles/variables";
+
+.clients-wrapper {
+  min-height: 542px;
+  background: $thirdBackground;
+  padding: 64px 0 52px;
+}
+
+.clients-title {
+  font-size: 42px;
+  line-height: 51px;
+  color: $secondaryTextColor;
+  text-align: center;
+  font-weight: 400;
+  margin: 0 0 4px;
+}

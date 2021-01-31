@@ -1,0 +1,142 @@
+@import "../../styles/variables";
+
+.footer-wrapper {
+  min-height: 285px;
+  background: $secondaryBackground;
+  padding: 60px 0;
+  color: $primaryTextColor;
+}
+
+.footer-section-title {
+  font-size: 22px;
+  line-height: 27px;
+  margin: 0 0 15px;
+  padding: 0 0 15px;
+  color: $primaryTextColor;
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: $primaryFillColor;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.footer-logo-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.company-policies a {
+  display: block;
+  color: $fourthTextColor;
+  font-size: 16px;
+  line-height: 30px;
+  transition: color $transitionTime linear;
+  &:hover {
+    color: $primaryFillColor;
+    text-decoration: none;
+  }
+}
+
+.contacts {
+  margin-top: 33px;
+  a {
+    display: block;
+    color: $fourthTextColor;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    margin: 17px 0;
+    text-align: center;
+    &:hover {
+      color: $primaryFillColor;
+      text-decoration: none;
+    }
+  }
+}
+
+.address {
+  color: $fourthTextColor;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.footer-navigation-wrapper {
+  max-width: 200px;
+}
+
+.footer-navigation {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  li {
+    min-width: 86px;
+  }
+  a {
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    color: $fourthTextColor;
+    position: relative;
+    overflow: hidden;
+    transition: color $transitionTime linear;
+    &:hover {
+      color: $primaryFillColor;
+      text-decoration: none;
+    }
+  }
+  & > :nth-child(2n) {
+    padding: 0 0 17px 7px;
+  }
+  & > :nth-child(2n + 1) {
+    padding: 0 7px 17px 0;
+  }
+  & > :last-child {
+    padding: 0 0 0 7px;
+  }
+  & > :nth-last-child(2) {
+    padding: 0 7px 0 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer-logo-section {
+    text-align: center;
+  }
+  .social {
+    margin-top: 30px;
+  }
+  .contact-us {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer-wrapper {
+    padding: 40px 0;
+  }
+  .footer-section-title {
+    margin-top: 30px;
+  }
+  .footer-navigation-wrapper {
+    margin: 0 auto;
+  }
+  .contact-us {
+    margin: 0 auto;
+    max-width: 200px;
+  }
+  .social {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,14 @@
+@import "../../styles/variables";
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  a svg {
+    fill: $primaryTextColor;
+    transition: fill $transitionTime linear;
+    &:hover {
+      fill: $primaryFillColor;
+    }
+  }
+}

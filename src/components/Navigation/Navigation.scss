@@ -1,0 +1,125 @@
+@import "../../styles/variables";
+
+.navigation {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  a {
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    color: $thirdTextColor;
+    padding: 10px 0;
+    margin: 0 30px;
+    position: relative;
+    overflow: hidden;
+    transition: color $transitionTime linear;
+    white-space: nowrap;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 100%;
+      bottom: 7px;
+      background: $primaryFillColor;
+      height: 2px;
+    }
+    &:hover {
+      color: $primaryFillColor;
+      text-decoration: none;
+    }
+    &.active {
+      &:before {
+        right: 0;
+      }
+    }
+  }
+  & > :first-child a {
+    margin-left: 0;
+  }
+  & > :last-child a {
+    margin-right: 0;
+  }
+}
+
+.contact-button {
+  background-color: $thirdBackground;
+  border: 2px solid $primaryFillColor;
+  font-size: 18px;
+  line-height: 46px;
+  height: 50px;
+  min-width: 160px;
+  text-align: center;
+  color: $thirdTextColor;
+  padding: 0 30px;
+  cursor: pointer;
+  transition: background-color $transitionTime linear;
+  white-space: nowrap;
+  &:hover {
+    background-color: $secondaryFillColor;
+    color: $primaryTextColor;
+  }
+}
+
+.burger-button {
+  background: transparent;
+  border: none;
+  position: relative;
+  width: 50px;
+  height: 40px;
+  padding: 5px;
+  span {
+    border-radius: 4px;
+    width: 40px;
+    height: 4px;
+    display: block;
+    background: $primaryFillColor;
+    position: absolute;
+    &:nth-of-type(1) {
+      left: 5px;
+      top: 5px;
+    }
+    &:nth-of-type(2) {
+      left: 5px;
+      top: calc(50% - 2px);
+    }
+    &:nth-of-type(3) {
+      left: 5px;
+      top: calc(100% - 7px);
+    }
+  }
+}
+
+.navigation-mobile {
+  position: fixed;
+  left: 0;
+  top: 115px;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: $primaryTextColor;
+  z-index: 9;
+  .navigation {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    a {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .navigation a {
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .navigation a {
+    margin: 0 10px;
+  }
+}

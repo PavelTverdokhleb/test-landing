@@ -1,0 +1,14 @@
+@import "../../styles/variables";
+
+.header-wrapper {
+  background: $primaryBackground;
+  overflow: hidden;
+}
+
+.header-inner {
+  width: 100%;
+  height: 117px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
