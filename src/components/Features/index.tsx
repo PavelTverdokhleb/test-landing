@@ -1,8 +1,8 @@
 import * as React from "react";
-import "./Features.scss";
-import { FEATURES } from "./constants";
-import { FeatureCard } from "../FeatureCard";
 import { Container, Row, Col } from "react-bootstrap";
+import { FEATURES } from "../../constants/features";
+import { FeatureCard } from "../FeatureCard";
+import "./Features.scss";
 
 export const Features = () => (
   <section id="features" className="features-wrapper">

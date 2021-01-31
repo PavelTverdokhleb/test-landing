@@ -6,9 +6,7 @@ import "./Navigation.scss";
 const DESKTOP_BOUNDARY = 992;
 const HEADER_HEIGHT = 115;
 
-const checkIsDesktop = (): boolean => {
-  return window.innerWidth >= DESKTOP_BOUNDARY;
-};
+const checkIsDesktop = (): boolean => window.innerWidth >= DESKTOP_BOUNDARY;
 
 export const Navigation = () => {
   const [isDesktop, setIsDesktop] = useState(() => checkIsDesktop());
@@ -23,14 +21,17 @@ export const Navigation = () => {
       ? "translate(0px, 14px) rotate(-45deg)"
       : "translate(0px, 0px) rotate(0deg)",
   });
+
   const midLineStyle = useSpring({
     opacity: isMenuOpen ? 0 : 1,
   });
+
   const botLineStyle = useSpring({
     transform: isMenuOpen
       ? "translate(0px, -14px) rotate(45deg)"
       : "translate(0px, 0px) rotate(0deg)",
   });
+
   const menuStyle = useSpring({
     from: {
       height: 0,
@@ -40,6 +41,7 @@ export const Navigation = () => {
     },
     ref: navRef,
   });
+
   const linkTransitions = useTransition(
     isMenuOpen ? NAVIGATION_ITEMS : [],
     (item) => item.id,
@@ -51,6 +53,7 @@ export const Navigation = () => {
       ref: linkRef,
     }
   );
+
   const contactUsStyle = useSpring({
     from: { opacity: 0, transform: "translateY(-20px)" },
     to: {
@@ -59,6 +62,7 @@ export const Navigation = () => {
     },
     ref: contactUsRef,
   });
+
   useChain(
     isMenuOpen
       ? [navRef, linkRef, contactUsRef]
@@ -91,6 +95,8 @@ export const Navigation = () => {
     };
   }, [handleResize]);
 
+  const contactButton = <button className="contact-button">Contact us</button>;
+
   if (isDesktop) {
     return (
       <>
@@ -103,7 +109,7 @@ export const Navigation = () => {
             </li>
           ))}
         </ul>
-        <button className="contact-button">Contact us</button>
+        {contactButton}
       </>
     );
   }
@@ -123,9 +129,7 @@ export const Navigation = () => {
               </a>
             </animated.li>
           ))}
-          <animated.li style={contactUsStyle}>
-            <button className="contact-button">Contact us</button>
-          </animated.li>
+          <animated.li style={contactUsStyle}>{contactButton}</animated.li>
         </ul>
       </animated.div>
     </>

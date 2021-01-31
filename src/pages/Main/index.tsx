@@ -5,14 +5,14 @@ import { Features } from "../../components/Features";
 import { OurClients } from "../../components/OurClients";
 import { Footer } from "../../components/Footer";
 
-export const Main = () => {
-  return (
-    <>
-      <Header />
+export const Main = () => (
+  <>
+    <Header />
+    <main>
       <Introduction />
       <Features />
       <OurClients />
-      <Footer />
-    </>
-  );
-};
+    </main>
+    <Footer />
+  </>
+);

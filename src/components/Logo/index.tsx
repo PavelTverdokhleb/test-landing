@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
-import logoDarkImage from "../../assets/images/logo_dark.svg";
-import logoWhiteImage from "../../assets/images/logo_white.svg";
+import logoDarkImage from "../../assets/images/logos/logo_dark.svg";
+import logoWhiteImage from "../../assets/images/logos/logo_white.svg";
 
 export enum LogoType {
   dark = "dark",

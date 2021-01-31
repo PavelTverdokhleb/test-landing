@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+# Test landing
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Usual landing page that provides information about cryptocurrency consulting company.
 
-## Available Scripts
+## Basic Setup
 
-In the project directory, you can run:
+These steps are required before further steps.
 
-### `npm start`
+### Machine Requirements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You need to have installed:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Node.js](https://nodejs.org/en/)
+- [NPM Package manager](https://www.npmjs.com/)
+- Cloned or downloaded version of this Project
 
-### `npm test`
+To prepare Application for further steps after repository clone you need to run next commands:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+cd <PROJECT_DIR>
+npm install
+```
 
-### `npm run build`
+These commands are going to help you to install all Project dependencies.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Development Start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run Application in development mode you need to run `npm start`.
+As a result, you will get a fully completed local development environment and run a development server at the [http://localhost:3000](http://localhost:3000).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+npm start
+```
 
-### `npm run eject`
+## Build Production
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To build an optimized production version you need to run `npm run build`, after completion, you will have bundled production
+code that you can use to deploy it to your hosting. You can take the result at the `~/build/` folder
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+npm run build
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Architecture
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Basic Info
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [TypeScript](http://www.typescriptlang.org) - It's a typed superset of JavaScript that compiles to plain JavaScript.
+- [React](https://reactjs.org) - A JavaScript library for building user interfaces.
+- [uuid](https://github.com/uuidjs/uuid) - For the creation of RFC4122 UUIDs.
+- [React-Spring](https://www.react-spring.io/) - A spring-physics based animation library that should cover most of your UI related animation needs.
+- [react-bootstrap](https://react-bootstrap.github.io/) - React-Bootstrap replaces the Bootstrap JavaScript.

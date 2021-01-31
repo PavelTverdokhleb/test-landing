@@ -1,5 +1,5 @@
 import React from "react";
-import { SOCIALS } from "./constants";
+import { SOCIALS } from "../../constants/social";
 import "./Social.scss";
 
 export const Social = () => (

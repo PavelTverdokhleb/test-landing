@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import { Container } from "react-bootstrap";
-import { INTRODUCTION_FEATURES } from "./constants";
+import { INTRODUCTION_FEATURES } from "../../constants/introduction";
 import { Separator } from "../Separator";
 import { FeatureLabel } from "../FeatureLabel";
 import arrowImg from "../../assets/images/arrow.svg";

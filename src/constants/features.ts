@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
-import liquidityImg from "../../assets/images/features/liquidity.svg";
-import technologyImg from "../../assets/images/features/technology.svg";
-import infrastructureImg from "../../assets/images/features/infrastructure.svg";
+import liquidityImg from "../assets/images/features/liquidity.svg";
+import technologyImg from "../assets/images/features/technology.svg";
+import infrastructureImg from "../assets/images/features/infrastructure.svg";
 
 export interface IFeature {
   id: string;

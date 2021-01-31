@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .separator {
   width: 210px;
   margin: 14px auto;
@@ -7,17 +9,18 @@
     display: block;
     width: 11px;
     height: 11px;
-    background: #fe9002;
+    background: $primaryFillColor;
     transform: rotate(45deg);
   }
-  &:before, &:after {
+  &:before,
+  &:after {
     content: "";
     display: block;
     width: 82px;
     height: 3px;
     position: absolute;
     top: 50%;
-    background: #D1D1D1;
+    background: $separatorStrokeColor;
     transform: translateY(-50%);
   }
   &:before {

@@ -1,13 +1,15 @@
-.our-clients-wrapper {
+@import "../../styles/variables";
+
+.clients-wrapper {
   min-height: 542px;
-  background: #F7F8FA;
+  background: $thirdBackground;
   padding: 64px 0 52px;
 }
 
-.our-clients-title {
+.clients-title {
   font-size: 42px;
   line-height: 51px;
-  color: #444444;
+  color: $secondaryTextColor;
   text-align: center;
   font-weight: 400;
   margin: 0 0 4px;

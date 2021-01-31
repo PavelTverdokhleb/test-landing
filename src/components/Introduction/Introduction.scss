@@ -1,3 +1,6 @@
+@import "../../styles/variables";
+@import "../../styles/animations";
+
 .introduction-wrapper {
   min-height: calc(100vh - 117px);
   background: url("../../assets/images/intro_bg.png") no-repeat 50% 100%;
@@ -14,7 +17,7 @@
 .introduction-title {
   font-size: 50px;
   line-height: 77px;
-  color: #ffffff;
+  color: $primaryTextColor;
   text-align: center;
   margin: 0 0 6px;
 }
@@ -22,7 +25,7 @@
 .introduction-subtitle {
   font-size: 26px;
   line-height: 43px;
-  color: #ffffff;
+  color: $primaryTextColor;
   text-align: center;
   margin: 16px auto 45px;
   max-width: 65%;
@@ -37,8 +40,8 @@
 .introduction-button {
   display: block;
   margin: 80px auto 0;
-  background: #fe9002;
-  color: #ffffff;
+  background: $primaryFillColor;
+  color: $primaryTextColor;
   padding: 15px 35px 15px 15px;
   border-radius: 1px;
   border: none;
@@ -52,27 +55,15 @@
     display: block;
     width: 36px;
     height: 36px;
-    background: #ffffff;
+    background: $primaryBackground;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translate(50%, -50%) rotate(45deg);
-    transition: transform 0.25s linear;
+    transition: transform $transitionTime linear;
   }
   &:hover:after {
     transform: translate(50%, -50%) rotate(225deg);
-  }
-}
-
-@keyframes arrowBounce {
-  0% {
-    transform: translate(-50%, 0);
-  }
-  50% {
-    transform: translate(-50%, -10px);
-  }
-  100% {
-    transform: translate(-50%, 0);
   }
 }
 
@@ -84,8 +75,7 @@
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  animation: arrowBounce 1s linear infinite;
-  transition: all 0.25s linear;
+  animation: bounce 1s linear infinite;
   &:hover {
     animation: none;
   }
